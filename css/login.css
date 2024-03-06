@@ -1,0 +1,129 @@
+*{
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("../images/background2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+
+.card-login {
+    all: unset;
+    width: 420px;
+    border: 2px solid rgba (255,255,255,.2);
+    color: white;
+    background: transparent;
+    padding: 30px 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    & .input {
+        all: unset;
+        border-radius: 5rem;
+        background: white;
+        color: black;
+        padding: 10px 7px;
+        width: 100%;
+    }
+    .form-inputs > .input:nth-child(1){
+        margin-bottom: 2rem;
+        
+    }
+    .position {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+    .position > .bx-user, .bxs-lock-alt {
+        position: absolute;
+        right: 0;
+        color: black;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.error-message {
+    color: #ff6347; 
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.input-error {
+    border: 1px solid #ff6347; 
+}
+
+.pull-apart {
+    display: flex;
+    gap: 10px;
+    padding: 1rem 0px;
+    justify-content: space-between;
+}
+
+.pull-apart a {
+    color: #fff;
+}
+
+
+.center-button {
+    display: flex;
+    justify-content: center;
+     & button {
+        all: unset;
+        width: 40%;
+        height: 30px;
+        background: #fff;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        padding: 10px 80px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+        cursor: pointer;
+        transition: all ease-in-out .3s; 
+        &:hover{
+            background: #2f3640;
+            color: #fff;
+            transform: scale(1.02);
+        }
+    } 
+
+}
+
+.field-acount {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.field-acount p a {
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+
