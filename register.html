@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/register.css" />
+  </head>
+  <div class="container">
+    <form action="" class="card-login" id="loginForm">
+      <h1>Regístrate</h1>
+      <div class="form-inputs">
+        <div class="container-input-flex">
+          <div class="position">
+            <input
+              type="text"
+              placeholder="Nombres"
+              class="input"
+              id="firstName"
+            />
+            <div class="error-message" id="firstNameError"></div>
+          </div>
+          <div class="position">
+            <input
+              type="text"
+              placeholder="Apellidos"
+              class="input"
+              id="lastName"
+            />
+            <div class="error-message" id="lastNameError"></div>
+          </div>
+        </div>
+  
+        <div class="container-input-flex">
+          <div class="position">
+            <input
+              type="text"
+              placeholder="Usuario"
+              class="input"
+              id="username"
+            />
+            <i class="bx bx-user"></i>
+            <div class="error-message" id="usernameError"></div>
+          </div>
+          <div class="position">
+            <input
+              type="password"
+              placeholder="Contraseña"
+              class="input"
+              id="password"
+            />
+            <i class='bx bxs-lock-alt'></i>
+            <div class="error-message" id="passwordError"></div>
+          </div>
+        </div>
+  
+        <div class="container-input-flex">
+          <div class="position">
+            <input
+              type="email"
+              placeholder="Correo"
+              class="input"
+              id="email"
+            />
+            <i class='bx bxs-envelope'></i>
+            <div class="error-message" id="emailError"></div>
+          </div>
+          <div class="position">
+            <input
+              type="tel"
+              placeholder="Teléfono"
+              class="input"
+              id="phone"
+            />
+            <i class='bx bxs-phone'></i>
+            <div class="error-message" id="phoneError"></div>
+          </div>
+        </div>
+  
+        <div class="container-input-flex">
+          <div class="position">
+            <input
+              type="text"
+              placeholder="Ciudad"
+              class="input"
+              id="city"
+            />
+            <i class='bx bxs-buildings'></i>
+            <div class="error-message" id="cityError"></div>
+          </div>
+          <div class="position">
+            <input
+              type="date"
+              class="input"
+              id="birthdate"
+            />
+            <div class="error-message" id="birthdateError"></div>
+          </div>
+        </div>
+  
+        <div class="center-button">
+          <button type="button" onclick="validateForm()">Registrarme</button>
+        </div>
+  
+        <div class="field-acount">
+          <p>¿Ya tienes una cuenta? <a href="login.html">Entra aquí</a></p>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <script src="./js/index.js"></script>
+  <script src="./js/formcontrol.js"></script>
+</html>

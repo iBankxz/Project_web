@@ -29,3 +29,111 @@ function validateLogin() {
         alert("Campos válidos");
     }
 }
+
+function validateForm() {
+    resetErrors();
+  
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var city = document.getElementById("city").value;
+    var birthdate = document.getElementById("birthdate").value;
+  
+    if (!firstName) {
+      showError("firstName", "Ingrese su nombre");
+    }
+  
+    if (!lastName) {
+      showError("lastName", "Ingrese sus apellidos");
+    }
+  
+    if (!username) {
+      showError("username", "Ingrese un nombre de usuario");
+    }
+  
+    if (!password) {
+      showError("password", "Ingrese una contraseña");
+    }
+  
+    if (!email || !isValidEmail(email)) {
+      showError("email", "Ingrese un correo electrónico válido");
+    }
+  
+    if (!phone || !isValidPhone(phone)) {
+      showError("phone", "Ingrese un número de teléfono válido");
+    }
+  
+    if (!city) {
+      showError("city", "Ingrese su ciudad");
+    }
+  
+    if (!birthdate) {
+      showError("birthdate", "Ingrese su fecha de nacimiento");
+    }
+  }
+  
+  function showError(inputId, errorMessage) {
+    var inputElement = document.getElementById(inputId);
+    inputElement.classList.add("error");
+  
+    var errorElement = document.getElementById(inputId + "Error");
+    errorElement.innerHTML = errorMessage;
+  }
+  
+  function resetErrors() {
+    var inputs = document.getElementsByClassName("input");
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].classList.remove("error");
+    }
+  
+    var errorMessages = document.getElementsByClassName("error-message");
+    for (var j = 0; j < errorMessages.length; j++) {
+      errorMessages[j].innerHTML = "";
+    }
+  }
+  
+  function isValidEmail(email) {
+    return email.includes("@");
+  }
+  
+  function isValidPhone(phone) {
+    return /^\d+$/.test(phone);
+  }
+  
+
+  function validateFormPass() {
+    resetErrors();
+
+    var username = document.getElementById("username").value;
+
+    if (!username || !isValidEmail(username)) {
+        showError("username", "Ingrese un correo electrónico válido");
+    }
+}
+
+function showError(inputId, errorMessage) {
+    var inputElement = document.getElementById(inputId);
+    inputElement.classList.add("error");
+
+    var errorElement = document.getElementById(inputId + "Error");
+    errorElement.innerHTML = errorMessage;
+}
+
+function resetErrors() {
+    var inputs = document.getElementsByClassName("input");
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].classList.remove("error");
+    }
+
+    var errorMessages = document.getElementsByClassName("error-message");
+    for (var j = 0; j < errorMessages.length; j++) {
+        errorMessages[j].innerHTML = "";
+    }
+}
+
+function isValidEmail(email) {
+    return email.includes("@");
+}

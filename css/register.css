@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    align-items: center;
     background: url("../images/background3.jpg");
     background-size: cover;
     background-position: center;
@@ -18,11 +19,6 @@ h1 {
     font-size: 36px;
     text-align: center;
     margin-bottom: 2rem;
-    color: #2f3640;
-}
-
-h2 {
-    text-align: center;
     color: #2f3640;
 }
 
@@ -56,29 +52,24 @@ h2 {
         margin-bottom: 2rem;
         
     }
+
+    .form-inputs .container-input-flex{
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+    }
+
     .position {
         position: relative;
         margin-bottom: 1rem;
     }
-    .position > .bx-user, .bxs-lock-alt, .bxs-envelope {
+    .position > .bx-user, .bxs-lock-alt, .bxs-phone, .bxs-envelope, .bxs-buildings {
         position: absolute;
         right: 0;
         color: black;
         top: 50%;
         transform: translateY(-50%);
     }
-}
-
-
-.pull-apart {
-    display: flex;
-    gap: 10px;
-    padding: 1rem 0px;
-    justify-content: space-between;
-}
-
-.pull-apart a {
-    color: #fff;
 }
 
 
@@ -116,7 +107,6 @@ h2 {
     color: #2f3640;
 }
 
-
 .field-acount p a {
     color: #fff;
     font-weight: 600;
@@ -124,20 +114,7 @@ h2 {
 }
 
 
-.forgot-password a {
-    color: #2f3640;
-}
-
-
-.remember label {
-    color: #2f3640;
-}
-
 .error-message {
-    color: #c0392b;
-}
-
-.error-messagePass {
     color: red;
     font-size: 12px;
     margin-top: 5px;
@@ -146,6 +123,3 @@ h2 {
   .input.error {
     border: 1px solid red;
   }
-
-
-
