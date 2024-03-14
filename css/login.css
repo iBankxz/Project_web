@@ -50,6 +50,7 @@ h2 {
         background: white;
         color: black;
         padding: 10px 7px;
+        padding-left: 1rem;
         width: 100%;
     }
     .form-inputs > .input:nth-child(1){

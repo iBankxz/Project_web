@@ -30,50 +30,69 @@ function validateLogin() {
     }
 }
 
-function validateForm() {
-    resetErrors();
+function validateForm(e) {
+  e.preventDefault(); 
+  resetErrors();
   
-    var firstName = document.getElementById("firstName").value;
-    var lastName = document.getElementById("lastName").value;
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var city = document.getElementById("city").value;
-    var birthdate = document.getElementById("birthdate").value;
-  
-    if (!firstName) {
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const city = document.getElementById("city").value;
+  const birthdate = document.getElementById("birthdate").value;
+
+  console.log(!firstName);
+  if (!firstName) {
       showError("firstName", "Ingrese su nombre");
-    }
-  
-    if (!lastName) {
-      showError("lastName", "Ingrese sus apellidos");
-    }
-  
-    if (!username) {
-      showError("username", "Ingrese un nombre de usuario");
-    }
-  
-    if (!password) {
-      showError("password", "Ingrese una contraseña");
-    }
-  
-    if (!email || !isValidEmail(email)) {
-      showError("email", "Ingrese un correo electrónico válido");
-    }
-  
-    if (!phone || !isValidPhone(phone)) {
-      showError("phone", "Ingrese un número de teléfono válido");
-    }
-  
-    if (!city) {
-      showError("city", "Ingrese su ciudad");
-    }
-  
-    if (!birthdate) {
-      showError("birthdate", "Ingrese su fecha de nacimiento");
-    }
+      return; 
   }
+
+  if (!lastName) {
+      showError("lastName", "Ingrese sus apellidos");
+      return; 
+  }
+
+  if (!username) {
+      showError("username", "Ingrese un nombre de usuario");
+      return; 
+  }
+
+  if (!password) {
+      showError("password", "Ingrese una contraseña");
+      return; 
+  }
+
+  if (!email || !isValidEmail(email)) {
+      showError("email", "Ingrese un correo electrónico válido");
+      return; 
+  }
+
+  if (!phone || !isValidPhone(phone)) {
+      showError("phone", "Ingrese un número de teléfono válido");
+      return; 
+  }
+
+  if (!city) {
+      showError("city", "Ingrese su ciudad");
+      return; 
+  }
+
+  if (!birthdate) {
+      showError("birthdate", "Ingrese su fecha de nacimiento");
+      return; 
+  }
+
+  if (firstName){
+     guardarDatos();
+  }
+
+  window.location.href = "login.html";
+}
+
+
+
   
   function showError(inputId, errorMessage) {
     var inputElement = document.getElementById(inputId);
@@ -136,4 +155,31 @@ function resetErrors() {
 
 function isValidEmail(email) {
     return email.includes("@");
+}
+
+
+function guardarDatos() {
+  const firstName = document.getElementById('firstName').value;
+  const lastName = document.getElementById('lastName').value;
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const city = document.getElementById('city').value;
+  const birthdate = document.getElementById('birthdate').value;
+
+  const userData = {
+    firstName: firstName,
+    lastName: lastName,
+    username: username,
+    password: password,
+    email: email,
+    phone: phone,
+    city: city,
+    birthdate: birthdate
+  };
+
+  const userDataJSON = JSON.stringify(userData);
+
+  localStorage.setItem('userData', userDataJSON);
 }
