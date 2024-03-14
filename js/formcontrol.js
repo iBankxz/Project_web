@@ -1,4 +1,5 @@
-function validateLogin() {
+function validateLogin(e) {
+    e.preventDefault();
     document.getElementById("usernameError").innerText = "";
     document.getElementById("passwordError").innerText = "";
 
@@ -18,8 +19,8 @@ function validateLogin() {
     if (password.trim() === "") {
         document.getElementById("passwordError").innerText = "Por favor, ingresa tu contraseña.";
         document.getElementById("password").classList.add("input-error");
-    } else if (password.length < 8 || password.length > 15) {
-        document.getElementById("passwordError").innerText = "La contraseña debe tener entre 8 y 15 caracteres.";
+    } else if (password.length < 5 || password.length > 12) {
+        document.getElementById("passwordError").innerText = "La contraseña debe tener entre 5 y 12 caracteres.";
         document.getElementById("password").classList.add("input-error");
     } else {
         document.getElementById("password").classList.remove("input-error");
@@ -28,6 +29,8 @@ function validateLogin() {
     if (username.trim() !== "" && password.trim() !== "") {
         alert("Campos válidos");
     }
+    
+    loginData();
 }
 
 function validateForm(e) {
@@ -43,7 +46,6 @@ function validateForm(e) {
   const city = document.getElementById("city").value;
   const birthdate = document.getElementById("birthdate").value;
 
-  console.log(!firstName);
   if (!firstName) {
       showError("firstName", "Ingrese su nombre");
       return; 
@@ -182,4 +184,19 @@ function guardarDatos() {
   const userDataJSON = JSON.stringify(userData);
 
   localStorage.setItem('userData', userDataJSON);
+}
+
+function loginData() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const user = localStorage.getItem('userData');
+    const userJson = JSON.parse(user);
+    console.log(userJson.password);
+    if (userJson.username === username && userJson.password === password) {
+        window.location.href = "index.html";
+    }
+    else {
+        console.log("Hubo un error");
+    }
+    
 }

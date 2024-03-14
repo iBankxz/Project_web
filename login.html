@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="container">
-      <form action="" class="card-login" id="loginForm">
+      <form action="" class="card-login" id="loginForm" onsubmit="validateLogin(event)">
         <h1>Login</h1>
         <div class="form-inputs">
           <div class="position">
@@ -52,7 +52,7 @@
           </div>
         </div>
         <div class="center-button">
-          <button type="button" onclick="validateLogin()">Entrar</button>
+          <button type="submit">Entrar</button>
         </div>
         <div class="field-acount">
           <p>¿No tienes una cuenta? <a href="registerUser.html">Regístrate como cliente o</a></p>
