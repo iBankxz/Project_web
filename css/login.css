@@ -59,7 +59,7 @@ h2 {
     }
     .position {
         position: relative;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
     }
     .position > .bx-user, .bxs-lock-alt, .bxs-envelope {
         position: absolute;
@@ -136,6 +136,7 @@ h2 {
 
 .error-message {
     color: #c0392b;
+    position: absolute;
 }
 
 .error-messagePass {
@@ -148,5 +149,6 @@ h2 {
     border: 1px solid red;
   }
 
+  
 
 

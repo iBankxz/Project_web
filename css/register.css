@@ -62,7 +62,7 @@ h1 {
 
     .position {
         position: relative;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
     .position > .bx-user, .bxs-lock-alt, .bxs-phone, .bxs-envelope, .bxs-buildings {
         position: absolute;
@@ -119,6 +119,7 @@ h1 {
     color: red;
     font-size: 12px;
     margin-top: 5px;
+    position: absolute;
   }
   
   .input.error {
