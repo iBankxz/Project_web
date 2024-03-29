@@ -47,8 +47,48 @@ body {
   font-weight: bold;
 }
 
+.publish-btn {
+  background-color: #8019c8; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px;
+}
+
 .heading_container h2 span {
   color: #8019c8;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+
+.search-btn {
+  padding: 8px 12px;
+  background-color: #8019c8;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-btn i {
+  font-size: 14px;
 }
 
 .heading_container.heading_center {

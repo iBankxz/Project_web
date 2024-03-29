@@ -1,0 +1,30 @@
+.filters {
+    float: left;
+    width: 200px;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .filters h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .filters ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .filters li {
+    margin-bottom: 10px;
+  }
+  
+  .filters a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .filters a:hover {
+    color: #555;
+  }
+  

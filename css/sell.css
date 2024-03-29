@@ -27,9 +27,10 @@ h1 {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
-.add-button button {
+.add-button label {
     background-color: #8019c8;
     color: white;
     border: none;
@@ -41,6 +42,10 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+}
+
+.add-button label:hover {
+    background-color: #999;
 }
 
 .add-button .subtitle {

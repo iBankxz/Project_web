@@ -27,7 +27,7 @@ function validateLogin(e) {
     }
 
     if (username.trim() !== "" && password.trim() !== "") {
-        alert("Campos válidos");
+        alert("Bienvenido");
     }
     
     loginData();
@@ -193,7 +193,7 @@ function loginData() {
     const userJson = JSON.parse(user);
     console.log(userJson.password);
     if (userJson.username === username && userJson.password === password) {
-        window.location.href = "index.html";
+        window.location.href = "index-login.html";
     }
     else {
         console.log("Hubo un error");
