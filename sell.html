@@ -78,7 +78,7 @@
         </nav>
       </div>
     </header>
-    <div class="container-sell">
+    <form onsubmit="send(event)" class="container-sell">
       <h1>Publicar</h1>
       <div class="content">
         <div class="add-button">
@@ -91,17 +91,26 @@
           <input
             type="text"
             placeholder="Un buen título tiene más de 3 palabras"
+            id="inputTitle"
           />
+          <div class="error-message title" id="inputTitleError"></div> <!-- Mensaje de error para el título -->
           <label for="">Descripción*</label>
           <textarea
             placeholder="Cuéntanos más de tu artículo. ¿Tiene algún detalle o imperfecto a destacar? ¿Qué medidas tiene? ¿Cómo queda puesto?"
-          ></textarea>
+            id="inputTextarea"
+            ></textarea>
+            <div class="error-message" id="inputTextareaError"></div> <!-- Mensaje de error para la descripción -->
         </div>
+<<<<<<< HEAD
         <a href="#">
           <button class="submit-button">Publicar</button>
+=======
+        <a href="sell2.html">
+          <button class="submit-button" type="submit">Continuar</button>
+>>>>>>> d439eeb45e259d05e322163fb2716f7feac0e8d0
         </a>
       </div>
-    </div>
+    </form>
     
     <section class="info_section layout_padding2">
       <div class="container">
@@ -204,5 +213,6 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.0.17/dist/umd/i18nextHttpBackend.min.js"></script>
+    <script type="text/javascript" src="js/sell.js"></script>
   </body>
 </html>
